@@ -7,5 +7,6 @@ defmodule RecipeManagerWeb.Router do
 
   scope "/api", RecipeManagerWeb do
     pipe_through :api
+    post "/measurement-units", MeasurementUnitController, :create
   end
 end
