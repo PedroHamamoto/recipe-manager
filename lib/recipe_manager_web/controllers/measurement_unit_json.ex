@@ -5,14 +5,14 @@ defmodule RecipeManagerWeb.MeasurementUnitJSON do
   Renders a list of measurement_units.
   """
   def index(%{measurement_units: measurement_units}) do
-    %{data: for(measurement_unit <- measurement_units, do: data(measurement_unit))}
+    for(measurement_unit <- measurement_units, do: data(measurement_unit))
   end
 
   @doc """
   Renders a single measurement_unit.
   """
   def show(%{measurement_unit: measurement_unit}) do
-    %{data: data(measurement_unit)}
+    data(measurement_unit)
   end
 
   defp data(%MeasurementUnit{} = measurement_unit) do
