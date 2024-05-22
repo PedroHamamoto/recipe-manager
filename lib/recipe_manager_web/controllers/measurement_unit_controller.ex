@@ -15,7 +15,7 @@ defmodule RecipeManagerWeb.MeasurementUnitController do
     with {:ok, %MeasurementUnit{} = measurement_unit} <- MeasurementUnits.create_measurement_unit(measurement_unit_params) do
       conn
       |> put_status(:created)
-      |> put_resp_header("location", ~p"/api/measurement_units/#{measurement_unit}")
+      |> put_resp_header("location", ~p"/api/measurement-units/#{measurement_unit}")
       |> render(:show, measurement_unit: measurement_unit)
     end
   end
