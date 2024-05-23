@@ -14,5 +14,9 @@ defmodule RecipeManagerWeb.Router do
     get "/ingredients", IngredientController, :show_all
     get "/ingredients/:id", IngredientController, :show
     post "/ingredients", IngredientController, :create
+
+    get "/recipes", RecipeController, :show_all
+    get "/recipes/:id", RecipeController, :show
+    post "/recipes", RecipeController, :create
   end
 end
